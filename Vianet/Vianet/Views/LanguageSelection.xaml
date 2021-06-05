@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage
+    x:Class="Vianet.Views.LanguageSelection"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="http://rotorgames.com">
+    <pages:PopupPage.Animation>
+        <pages:ScaleAnimation
+            DurationIn="400"
+            DurationOut="300"
+            EasingIn="SinOut"
+            EasingOut="SinIn"
+            HasBackgroundAnimation="True"
+            PositionIn="Bottom"
+            PositionOut="Bottom"
+            ScaleIn="1.2"
+            ScaleOut="0.8" />
+    </pages:PopupPage.Animation>
+    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand">
+        <Frame
+            Margin="0"
+            Padding="0"
+            CornerRadius="5"
+            HasShadow="False">
+            <StackLayout Margin="20" Spacing="0">
+                <Label
+                    Margin="0,0,0,30"
+                    FontFamily="MainFont"
+                    FontSize="14"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Select Language"
+                    TextColor="Black"
+                    VerticalOptions="CenterAndExpand" />
+
+                <StackLayout
+                    HorizontalOptions="FillAndExpand"
+                    Orientation="Horizontal"
+                    Spacing="0">
+
+                    <StackLayout Spacing="0">
+                        <Frame
+                            Padding="0"
+                            BackgroundColor="{StaticResource MainColor}"
+                            CornerRadius="23"
+                            HasShadow="False"
+                            HeightRequest="46"
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="46">
+                            <Label
+                                FontAttributes="Bold"
+                                FontFamily="MainFont"
+                                FontSize="14"
+                                HorizontalOptions="CenterAndExpand"
+                                Text="E"
+                                TextColor="White"
+                                VerticalOptions="CenterAndExpand" />
+                        </Frame>
+
+                        <Label
+                            FontAttributes="Bold"
+                            FontFamily="MainFont"
+                            FontSize="14"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="English"
+                            TextColor="{StaticResource MainColor}"
+                            VerticalOptions="CenterAndExpand" />
+                    </StackLayout>
+
+
+
+                    <StackLayout Spacing="0">
+                        <Frame
+                            Padding="0"
+                            BackgroundColor="#F7F2F2"
+                            CornerRadius="23"
+                            HasShadow="False"
+                            HeightRequest="46"
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="46">
+                            <Label
+                                FontAttributes="Bold"
+                                FontFamily="MainFont"
+                                FontSize="14"
+                                HorizontalOptions="CenterAndExpand"
+                                Text="ने"
+                                TextColor="{StaticResource MainColor}"
+                                VerticalOptions="CenterAndExpand" />
+                        </Frame>
+
+                        <Label
+                            FontAttributes="Bold"
+                            FontFamily="MainFont"
+                            FontSize="14"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="नेपाली"
+                            VerticalOptions="CenterAndExpand" />
+                    </StackLayout>
+
+
+
+
+                    <StackLayout Spacing="0">
+                        <Frame
+                            Padding="0"
+                            BackgroundColor="#F7F2F2"
+                            CornerRadius="23"
+                            HasShadow="False"
+                            HeightRequest="46"
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="46">
+                            <Label
+                                FontAttributes="Bold"
+                                FontFamily="MainFont"
+                                FontSize="14"
+                                HorizontalOptions="CenterAndExpand"
+                                Text="E"
+                                TextColor="{StaticResource MainColor}"
+                                VerticalOptions="CenterAndExpand" />
+                        </Frame>
+
+                        <Label
+                            FontAttributes="Bold"
+                            FontFamily="MainFont"
+                            FontSize="14"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="नेपाली"
+                            VerticalOptions="CenterAndExpand" />
+                    </StackLayout>
+
+                </StackLayout>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+</pages:PopupPage>
