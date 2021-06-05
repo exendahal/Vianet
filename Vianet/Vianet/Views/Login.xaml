@@ -1,128 +1,78 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage
+<pages:PopupPage
     x:Class="Vianet.Views.Login"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    BackgroundColor="{StaticResource MainColor}">
-    <ContentPage.Content>
-        <ScrollView>
-            <StackLayout VerticalOptions="FillAndExpand">
+    xmlns:pages="http://rotorgames.com">
+    <pages:PopupPage.Animation>
+        <pages:ScaleAnimation
+            DurationIn="400"
+            DurationOut="300"
+            EasingIn="SinOut"
+            EasingOut="SinIn"
+            HasBackgroundAnimation="True"
+            PositionIn="Bottom"
+            PositionOut="Bottom"
+            ScaleIn="1.2"
+            ScaleOut="0.8" />
+    </pages:PopupPage.Animation>
 
-                <StackLayout VerticalOptions="CenterAndExpand">
-                    <StackLayout Margin="0,50" Spacing="0">
-                        <Label
-                            FontAttributes="Bold"
-                            FontFamily="MainFont"
-                            FontSize="100"
-                            HorizontalOptions="CenterAndExpand"
-                            Text="V"
-                            TextColor="White"
-                            VerticalOptions="CenterAndExpand" />
+    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand">
+        <Frame
+            Margin="0"
+            Padding="0"
+            CornerRadius="5"
+            HasShadow="False">
+            <StackLayout Margin="20,40" Spacing="0">
+                <Label
+                    FontAttributes="Bold"
+                    FontFamily="MainFont"
+                    FontSize="24"
+                    HorizontalOptions="StartAndExpand"
+                    Text="Login"
+                    TextColor="{StaticResource MainColor}"
+                    VerticalOptions="CenterAndExpand" />
 
-                        <Label
-                            FontAttributes="Bold"
-                            FontFamily="MainFont"
-                            FontSize="22"
-                            HorizontalOptions="CenterAndExpand"
-                            Text="Vianet"
-                            TextColor="White"
-                            VerticalOptions="CenterAndExpand" />
-                    </StackLayout>
-
-
-                    <Label
-                        FontAttributes="Bold"
-                        FontFamily="MainFont"
-                        FontSize="26"
-                        HorizontalOptions="CenterAndExpand"
-                        Text="Welcome"
-                        TextColor="White"
-                        VerticalOptions="CenterAndExpand" />
-                    <Label
-                        FontFamily="MainFont"
-                        FontSize="14"
-                        HorizontalOptions="CenterAndExpand"
-                        Text="Enjoy the Nepals fastest and best network"
-                        TextColor="White"
-                        VerticalOptions="CenterAndExpand" />
-
-                    <Frame
-                        Margin="20,45,20,10"
-                        Padding="0"
-                        BackgroundColor="Transparent"
-                        BorderColor="White"
-                        HasShadow="False"
-                        HorizontalOptions="FillAndExpand">
-                        <Label
-                            Margin="15"
-                            FontAttributes="Bold"
-                            FontFamily="MainFont"
-                            FontSize="16"
-                            HorizontalOptions="CenterAndExpand"
-                            Text="NEW CONNECTION"
-                            TextColor="White"
-                            VerticalOptions="CenterAndExpand" />
-                    </Frame>
-
-                    <Frame
-                        Margin="20,10,20,0"
-                        Padding="0"
-                        BackgroundColor="White"
-                        BorderColor="White"
-                        HasShadow="False"
-                        HorizontalOptions="FillAndExpand">
-                        <Label
-                            Margin="15"
-                            FontAttributes="Bold"
-                            FontFamily="MainFont"
-                            FontSize="16"
-                            HorizontalOptions="CenterAndExpand"
-                            Text="LOGIN"
-                            TextColor="{StaticResource MainColor}"
-                            VerticalOptions="CenterAndExpand" />
-                    </Frame>
-                </StackLayout>
+                <Label
+                    Margin="0,5"
+                    FontAttributes="Bold"
+                    FontFamily="MainFont"
+                    FontSize="12"
+                    HorizontalOptions="StartAndExpand"
+                    Text="Lets get started"
+                    VerticalOptions="CenterAndExpand" />
 
 
-                <StackLayout
-                    Margin="0,40"
-                    HorizontalOptions="CenterAndExpand"
-                    Orientation="Horizontal"
-                    Spacing="0"
-                    VerticalOptions="EndAndExpand">
+                <Frame
+                    Margin="0,20"
+                    Padding="0"
+                    BackgroundColor="#F4F8FB"
+                    CornerRadius="4">
+                    <Entry Keyboard="Numeric" Placeholder="Mobile Number" />
+                </Frame>
+
+
+                <Frame
+                    Margin="0,20,0,30"
+                    Padding="0"
+                    BackgroundColor="{StaticResource MainColor}"
+                    BorderColor="{StaticResource MainColor}"
+                    HasShadow="False"
+                    HorizontalOptions="FillAndExpand">
                     <Label
                         Margin="15"
+                        FontAttributes="Bold"
                         FontFamily="MainFont"
-                        FontSize="12"
+                        FontSize="16"
                         HorizontalOptions="CenterAndExpand"
-                        Text="Language"
+                        Text="CONTINUE"
                         TextColor="White"
                         VerticalOptions="CenterAndExpand" />
-
-                    <Frame
-                        Padding="0"
-                        BackgroundColor="#D6001B"
-                        CornerRadius="25"
-                        HasShadow="False"
-                        HorizontalOptions="CenterAndExpand"
-                        VerticalOptions="CenterAndExpand">
-                        <Label
-                            x:Name="DefaultLanguage"
-                            Margin="20,5"
-                            FontAttributes="Bold"
-                            FontFamily="MainFont"
-                            FontSize="12"
-                            HorizontalOptions="CenterAndExpand"
-                            Text="English"
-                            TextColor="White"
-                            VerticalOptions="CenterAndExpand" />
-                        <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_language" />
-                        </Frame.GestureRecognizers>
-                    </Frame>
-                </StackLayout>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_Next" />
+                    </Frame.GestureRecognizers>
+                </Frame>
             </StackLayout>
-        </ScrollView>
-
-    </ContentPage.Content>
-</ContentPage>
+        </Frame>
+    </StackLayout>
+</pages:PopupPage>

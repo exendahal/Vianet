@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Vianet.Views.WelcomePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="{StaticResource MainColor}">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout VerticalOptions="FillAndExpand">
+
+                <StackLayout VerticalOptions="CenterAndExpand">
+                    <StackLayout Margin="0,50" Spacing="0">
+                        <Label
+                            FontAttributes="Bold"
+                            FontFamily="MainFont"
+                            FontSize="100"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="V"
+                            TextColor="White"
+                            VerticalOptions="CenterAndExpand" />
+
+                        <Label
+                            FontAttributes="Bold"
+                            FontFamily="MainFont"
+                            FontSize="22"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="Vianet"
+                            TextColor="White"
+                            VerticalOptions="CenterAndExpand" />
+                    </StackLayout>
+
+
+                    <Label
+                        FontAttributes="Bold"
+                        FontFamily="MainFont"
+                        FontSize="26"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="Welcome"
+                        TextColor="White"
+                        VerticalOptions="CenterAndExpand" />
+                    <Label
+                        FontFamily="MainFont"
+                        FontSize="14"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="Enjoy the Nepals fastest and best network"
+                        TextColor="White"
+                        VerticalOptions="CenterAndExpand" />
+
+                    <Frame
+                        Margin="20,45,20,10"
+                        Padding="0"
+                        BackgroundColor="Transparent"
+                        BorderColor="White"
+                        HasShadow="False"
+                        HorizontalOptions="FillAndExpand">
+                        <Label
+                            Margin="15"
+                            FontAttributes="Bold"
+                            FontFamily="MainFont"
+                            FontSize="16"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="NEW CONNECTION"
+                            TextColor="White"
+                            VerticalOptions="CenterAndExpand" />
+                    </Frame>
+
+                    <Frame
+                        Margin="20,10,20,0"
+                        Padding="0"
+                        BackgroundColor="White"
+                        BorderColor="White"
+                        HasShadow="False"
+                        HorizontalOptions="FillAndExpand">
+                        <Label
+                            Margin="15"
+                            FontAttributes="Bold"
+                            FontFamily="MainFont"
+                            FontSize="16"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="LOGIN"
+                            TextColor="{StaticResource MainColor}"
+                            VerticalOptions="CenterAndExpand" />
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_Login" />
+                        </Frame.GestureRecognizers>
+                    </Frame>
+                </StackLayout>
+
+
+                <StackLayout
+                    Margin="0,40"
+                    HorizontalOptions="CenterAndExpand"
+                    Orientation="Horizontal"
+                    Spacing="0"
+                    VerticalOptions="EndAndExpand">
+                    <Label
+                        Margin="15"
+                        FontFamily="MainFont"
+                        FontSize="12"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="Language"
+                        TextColor="White"
+                        VerticalOptions="CenterAndExpand" />
+
+                    <Frame
+                        Padding="0"
+                        BackgroundColor="#D6001B"
+                        CornerRadius="25"
+                        HasShadow="False"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand">
+                        <Label
+                            x:Name="DefaultLanguage"
+                            Margin="20,5"
+                            FontAttributes="Bold"
+                            FontFamily="MainFont"
+                            FontSize="12"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="English"
+                            TextColor="White"
+                            VerticalOptions="CenterAndExpand" />
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_language" />
+                        </Frame.GestureRecognizers>
+                    </Frame>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -11,7 +11,7 @@ namespace Vianet
         {
             InitializeComponent();
 
-            MainPage = new Login();
+            MainPage = new WelcomePage();
         }
 
         protected override void OnStart()
