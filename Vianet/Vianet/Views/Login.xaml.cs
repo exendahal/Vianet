@@ -1,4 +1,5 @@
 ﻿
+using Rg.Plugins.Popup.Extensions;
 using Xamarin.Forms.Xaml;
 
 namespace Vianet.Views
@@ -11,10 +12,10 @@ namespace Vianet.Views
             InitializeComponent();
             
         }
-
-        private void TapGestureRecognizer_Tapped_Next(object sender, System.EventArgs e)
+       
+        private async void TapGestureRecognizer_Tapped_Next(object sender, System.EventArgs e)
         {
-
+            await Navigation.PushPopupAsync(new OTP());
         }
     }
 }

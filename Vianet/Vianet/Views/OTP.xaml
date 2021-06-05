@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <pages:PopupPage
-    x:Class="Vianet.Views.Login"
+    x:Class="Vianet.Views.OTP"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:pages="http://rotorgames.com"
@@ -30,7 +30,7 @@
                     FontFamily="MainFont"
                     FontSize="24"
                     HorizontalOptions="StartAndExpand"
-                    Text="Login"
+                    Text="OTP"
                     TextColor="{StaticResource MainColor}"
                     VerticalOptions="CenterAndExpand" />
 
@@ -40,7 +40,7 @@
                     FontFamily="MainFont"
                     FontSize="12"
                     HorizontalOptions="StartAndExpand"
-                    Text="Lets get started"
+                    Text="Enter OTP to Continue"
                     VerticalOptions="CenterAndExpand" />
 
 
@@ -51,9 +51,9 @@
                     CornerRadius="4"
                     HasShadow="False">
                     <renderer:CustomEntry
-                        x:Name="mobile"
+                        x:Name="otp"
                         Keyboard="Numeric"
-                        Placeholder="Mobile Number" />
+                        Placeholder="OTP Code" />
                 </Frame>
 
 
@@ -70,7 +70,7 @@
                         FontFamily="MainFont"
                         FontSize="16"
                         HorizontalOptions="CenterAndExpand"
-                        Text="CONTINUE"
+                        Text="FINISH"
                         TextColor="White"
                         VerticalOptions="CenterAndExpand" />
                     <Frame.GestureRecognizers>
