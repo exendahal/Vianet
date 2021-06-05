@@ -9,7 +9,7 @@
             <StackLayout VerticalOptions="FillAndExpand">
 
                 <StackLayout VerticalOptions="CenterAndExpand">
-                    <StackLayout Margin="0,80,0,60" Spacing="0">
+                    <StackLayout Margin="0,50" Spacing="0">
                         <Label
                             FontAttributes="Bold"
                             FontFamily="MainFont"
@@ -59,7 +59,7 @@
                             FontFamily="MainFont"
                             FontSize="16"
                             HorizontalOptions="CenterAndExpand"
-                            Text="SIGN UP"
+                            Text="NEW CONNECTION"
                             TextColor="White"
                             VerticalOptions="CenterAndExpand" />
                     </Frame>
@@ -107,6 +107,7 @@
                         HorizontalOptions="CenterAndExpand"
                         VerticalOptions="CenterAndExpand">
                         <Label
+                            x:Name="DefaultLanguage"
                             Margin="20,5"
                             FontAttributes="Bold"
                             FontFamily="MainFont"

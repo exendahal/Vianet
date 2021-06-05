@@ -33,12 +33,13 @@
                     VerticalOptions="CenterAndExpand" />
 
                 <StackLayout
-                    HorizontalOptions="FillAndExpand"
+                    HorizontalOptions="CenterAndExpand"
                     Orientation="Horizontal"
                     Spacing="0">
 
-                    <StackLayout Spacing="0">
+                    <StackLayout Margin="15,0" Spacing="0">
                         <Frame
+                            x:Name="englishFrame"
                             Padding="0"
                             BackgroundColor="{StaticResource MainColor}"
                             CornerRadius="23"
@@ -48,6 +49,7 @@
                             VerticalOptions="CenterAndExpand"
                             WidthRequest="46">
                             <Label
+                                x:Name="langColor"
                                 FontAttributes="Bold"
                                 FontFamily="MainFont"
                                 FontSize="14"
@@ -55,9 +57,12 @@
                                 Text="E"
                                 TextColor="White"
                                 VerticalOptions="CenterAndExpand" />
+
                         </Frame>
 
                         <Label
+                            x:Name="englishText"
+                            Margin="0,5"
                             FontAttributes="Bold"
                             FontFamily="MainFont"
                             FontSize="14"
@@ -65,12 +70,17 @@
                             Text="English"
                             TextColor="{StaticResource MainColor}"
                             VerticalOptions="CenterAndExpand" />
+
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_english" />
+                        </StackLayout.GestureRecognizers>
                     </StackLayout>
 
 
 
-                    <StackLayout Spacing="0">
+                    <StackLayout Margin="15,0" Spacing="0">
                         <Frame
+                            x:Name="nepaliFrame"
                             Padding="0"
                             BackgroundColor="#F7F2F2"
                             CornerRadius="23"
@@ -80,6 +90,7 @@
                             VerticalOptions="CenterAndExpand"
                             WidthRequest="46">
                             <Label
+                                x:Name="nepLang"
                                 FontAttributes="Bold"
                                 FontFamily="MainFont"
                                 FontSize="14"
@@ -90,45 +101,21 @@
                         </Frame>
 
                         <Label
+                            x:Name="nepaliText"
+                            Margin="0,5"
                             FontAttributes="Bold"
                             FontFamily="MainFont"
                             FontSize="14"
                             HorizontalOptions="CenterAndExpand"
                             Text="नेपाली"
                             VerticalOptions="CenterAndExpand" />
+
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_nepali" />
+                        </StackLayout.GestureRecognizers>
                     </StackLayout>
 
 
-
-
-                    <StackLayout Spacing="0">
-                        <Frame
-                            Padding="0"
-                            BackgroundColor="#F7F2F2"
-                            CornerRadius="23"
-                            HasShadow="False"
-                            HeightRequest="46"
-                            HorizontalOptions="CenterAndExpand"
-                            VerticalOptions="CenterAndExpand"
-                            WidthRequest="46">
-                            <Label
-                                FontAttributes="Bold"
-                                FontFamily="MainFont"
-                                FontSize="14"
-                                HorizontalOptions="CenterAndExpand"
-                                Text="E"
-                                TextColor="{StaticResource MainColor}"
-                                VerticalOptions="CenterAndExpand" />
-                        </Frame>
-
-                        <Label
-                            FontAttributes="Bold"
-                            FontFamily="MainFont"
-                            FontSize="14"
-                            HorizontalOptions="CenterAndExpand"
-                            Text="नेपाली"
-                            VerticalOptions="CenterAndExpand" />
-                    </StackLayout>
 
                 </StackLayout>
             </StackLayout>
