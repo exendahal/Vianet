@@ -9,7 +9,7 @@
             <StackLayout VerticalOptions="FillAndExpand">
 
                 <StackLayout VerticalOptions="CenterAndExpand">
-                    <StackLayout Margin="0,50" Spacing="0">
+                    <StackLayout Margin="0,25" Spacing="0">
                         <Label
                             FontAttributes="Bold"
                             FontFamily="MainFont"
@@ -47,7 +47,7 @@
                         VerticalOptions="CenterAndExpand" />
 
                     <Frame
-                        Margin="20,45,20,10"
+                        Margin="20,35,20,10"
                         Padding="0"
                         BackgroundColor="Transparent"
                         BorderColor="White"
@@ -88,7 +88,7 @@
 
 
                 <StackLayout
-                    Margin="0,40"
+                    Margin="0,30"
                     HorizontalOptions="CenterAndExpand"
                     Orientation="Horizontal"
                     Spacing="0"

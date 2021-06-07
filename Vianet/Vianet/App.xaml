@@ -5,5 +5,9 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
     <Application.Resources>
         <Color x:Key="MainColor">#EC1C24</Color>
+        <Style TargetType="NavigationPage">
+            <Setter Property="BarBackgroundColor" Value="White" />
+            <Setter Property="BarTextColor" Value="#D6001B" />
+        </Style>
     </Application.Resources>
 </Application>

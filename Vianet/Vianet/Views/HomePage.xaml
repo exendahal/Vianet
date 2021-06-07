@@ -1,0 +1,532 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Vianet.Views.HomePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="#F4F8FB"
+    Visual="Material">
+
+    <NavigationPage.TitleView>
+        <StackLayout
+            HorizontalOptions="FillAndExpand"
+            Orientation="Horizontal"
+            Spacing="5"
+            VerticalOptions="CenterAndExpand">
+
+            <Label
+                Margin="15,0"
+                FontAttributes="Bold"
+                FontFamily="MainFont"
+                FontSize="26"
+                HorizontalOptions="StartAndExpand"
+                LineBreakMode="TailTruncation"
+                MaxLines="1"
+                Text="Vianet"
+                TextColor="{StaticResource MainColor}"
+                VerticalOptions="CenterAndExpand"
+                VerticalTextAlignment="Center" />
+
+            <Image
+                Margin="10,0"
+                Aspect="AspectFit"
+                HeightRequest="30">
+                <Image.Source>
+                    <FontImageSource
+                        FontFamily="Icon"
+                        Glyph="&#xf09c;"
+                        Size="30"
+                        Color="Black" />
+                </Image.Source>
+            </Image>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Frame
+                    Padding="10"
+                    BackgroundColor="#DFF6E8"
+                    HasShadow="False"
+                    VerticalOptions="Start">
+                    <Label
+                        FontAttributes="Bold"
+                        FontFamily="MainFont"
+                        FontSize="18"
+                        HorizontalOptions="CenterAndExpand"
+                        LineBreakMode="TailTruncation"
+                        MaxLines="1"
+                        Text="Your internet speed is Good now !"
+                        TextColor="Black"
+                        VerticalOptions="CenterAndExpand"
+                        VerticalTextAlignment="Center" />
+                </Frame>
+
+                <Frame
+                    Margin="16,10,16,0"
+                    Padding="0"
+                    CornerRadius="4">
+
+                    <StackLayout Spacing="0">
+                        <Frame
+                            Margin="30"
+                            Padding="0"
+                            BackgroundColor="#F7F6FB"
+                            CornerRadius="97"
+                            HasShadow="False"
+                            HeightRequest="194"
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="194" />
+
+                        <Label
+                            FontAttributes="Bold"
+                            FontFamily="MainFont"
+                            FontSize="14"
+                            HorizontalOptions="CenterAndExpand"
+                            LineBreakMode="TailTruncation"
+                            MaxLines="1"
+                            Text="Renew in 40 Days"
+                            TextColor="Black"
+                            VerticalOptions="CenterAndExpand"
+                            VerticalTextAlignment="Center" />
+
+                        <Label
+                            Margin="0,0,0,10"
+                            FontAttributes="Bold"
+                            FontFamily="MainFont"
+                            FontSize="14"
+                            HorizontalOptions="CenterAndExpand"
+                            LineBreakMode="TailTruncation"
+                            MaxLines="1"
+                            Opacity="0.5"
+                            Text="Tap to view detailed usage details &gt;&gt;"
+                            TextColor="#D6001B"
+                            VerticalOptions="CenterAndExpand"
+                            VerticalTextAlignment="Center" />
+                    </StackLayout>
+
+                </Frame>
+
+                <Frame
+                    Margin="16,16,16,10"
+                    Padding="0"
+                    CornerRadius="4">
+                    <Frame
+                        Margin="16"
+                        Padding="0"
+                        BackgroundColor="Transparent"
+                        HasShadow="False">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Frame
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                Margin="0,0,6,6"
+                                Padding="0"
+                                BackgroundColor="#FEF3F3"
+                                BorderColor="{StaticResource MainColor}"
+                                CornerRadius="4"
+                                HasShadow="False">
+
+                                <StackLayout Margin="20" Spacing="0">
+                                    <Image
+                                        Aspect="AspectFit"
+                                        HeightRequest="30"
+                                        HorizontalOptions="StartAndExpand">
+                                        <Image.Source>
+                                            <FontImageSource
+                                                FontFamily="Icon"
+                                                Glyph="&#xF60a;"
+                                                Size="30"
+                                                Color="{StaticResource MainColor}" />
+                                        </Image.Source>
+                                    </Image>
+
+                                    <Label
+                                        Margin="0,3,0,4"
+                                        FontAttributes="Bold"
+                                        FontFamily="MainFont"
+                                        FontSize="14"
+                                        HorizontalOptions="StartAndExpand"
+                                        LineBreakMode="TailTruncation"
+                                        MaxLines="1"
+                                        Text="Signal strenth"
+                                        TextColor="#666666"
+                                        VerticalOptions="CenterAndExpand"
+                                        VerticalTextAlignment="Center" />
+
+                                    <Label
+                                        FontAttributes="Bold"
+                                        FontFamily="MainFont"
+                                        FontSize="20"
+                                        HorizontalOptions="StartAndExpand"
+                                        LineBreakMode="TailTruncation"
+                                        MaxLines="1"
+                                        Text="85%"
+                                        TextColor="{StaticResource MainColor}"
+                                        VerticalOptions="CenterAndExpand"
+                                        VerticalTextAlignment="Center" />
+                                </StackLayout>
+
+                            </Frame>
+
+                            <Frame
+                                Grid.Row="0"
+                                Grid.Column="1"
+                                Margin="6,0,0,6"
+                                Padding="0"
+                                BackgroundColor="#F2FAFF"
+                                BorderColor="#009DFF"
+                                CornerRadius="4"
+                                HasShadow="False">
+
+                                <StackLayout Margin="20" Spacing="0">
+                                    <Image
+                                        Aspect="AspectFit"
+                                        HeightRequest="30"
+                                        HorizontalOptions="StartAndExpand">
+                                        <Image.Source>
+                                            <FontImageSource
+                                                FontFamily="Icon"
+                                                Glyph="&#xF339;"
+                                                Size="30"
+                                                Color="#009DFF" />
+                                        </Image.Source>
+                                    </Image>
+
+                                    <Label
+                                        Margin="0,3,0,4"
+                                        FontAttributes="Bold"
+                                        FontFamily="MainFont"
+                                        FontSize="14"
+                                        HorizontalOptions="StartAndExpand"
+                                        LineBreakMode="TailTruncation"
+                                        MaxLines="1"
+                                        Text="Ping"
+                                        TextColor="#666666"
+                                        VerticalOptions="CenterAndExpand"
+                                        VerticalTextAlignment="Center" />
+
+                                    <Label
+                                        FontAttributes="Bold"
+                                        FontFamily="MainFont"
+                                        FontSize="20"
+                                        HorizontalOptions="StartAndExpand"
+                                        LineBreakMode="TailTruncation"
+                                        MaxLines="1"
+                                        Text="14 ms"
+                                        TextColor="#009DFF"
+                                        VerticalOptions="CenterAndExpand"
+                                        VerticalTextAlignment="Center" />
+                                </StackLayout>
+
+                            </Frame>
+
+                            <Frame
+                                Grid.Row="1"
+                                Grid.Column="0"
+                                Margin="0,6,6,0"
+                                Padding="0"
+                                BackgroundColor="#FFFFFC"
+                                BorderColor="#FFCE00"
+                                CornerRadius="4"
+                                HasShadow="False">
+
+                                <StackLayout Margin="20" Spacing="0">
+                                    <Image
+                                        Aspect="AspectFit"
+                                        HeightRequest="30"
+                                        HorizontalOptions="StartAndExpand">
+                                        <Image.Source>
+                                            <FontImageSource
+                                                FontFamily="Icon"
+                                                Glyph="&#xFcb8;"
+                                                Size="30"
+                                                Color="#FFCE00" />
+                                        </Image.Source>
+                                    </Image>
+
+                                    <Label
+                                        Margin="0,3,0,4"
+                                        FontAttributes="Bold"
+                                        FontFamily="MainFont"
+                                        FontSize="14"
+                                        HorizontalOptions="StartAndExpand"
+                                        LineBreakMode="TailTruncation"
+                                        MaxLines="1"
+                                        Text="Download Speed"
+                                        TextColor="#666666"
+                                        VerticalOptions="CenterAndExpand"
+                                        VerticalTextAlignment="Center" />
+
+                                    <Label
+                                        FontAttributes="Bold"
+                                        FontFamily="MainFont"
+                                        FontSize="20"
+                                        HorizontalOptions="StartAndExpand"
+                                        LineBreakMode="TailTruncation"
+                                        MaxLines="1"
+                                        Text="20 mb/s"
+                                        TextColor="#FFCE00"
+                                        VerticalOptions="CenterAndExpand"
+                                        VerticalTextAlignment="Center" />
+                                </StackLayout>
+
+                            </Frame>
+
+                            <Frame
+                                Grid.Row="1"
+                                Grid.Column="1"
+                                Margin="6,6,0,0"
+                                Padding="0"
+                                BackgroundColor="#FFF2FF"
+                                BorderColor="#FF00EE"
+                                CornerRadius="4"
+                                HasShadow="False">
+
+                                <StackLayout Margin="20" Spacing="0">
+                                    <Image
+                                        Aspect="AspectFit"
+                                        HeightRequest="30"
+                                        HorizontalOptions="StartAndExpand">
+                                        <Image.Source>
+                                            <FontImageSource
+                                                FontFamily="Icon"
+                                                Glyph="&#xFcb8;"
+                                                Size="30"
+                                                Color="#FF00EE" />
+                                        </Image.Source>
+                                    </Image>
+
+                                    <Label
+                                        Margin="0,3,0,4"
+                                        FontAttributes="Bold"
+                                        FontFamily="MainFont"
+                                        FontSize="14"
+                                        HorizontalOptions="StartAndExpand"
+                                        LineBreakMode="TailTruncation"
+                                        MaxLines="1"
+                                        Text="Upload Speed"
+                                        TextColor="#666666"
+                                        VerticalOptions="CenterAndExpand"
+                                        VerticalTextAlignment="Center" />
+
+                                    <Label
+                                        FontAttributes="Bold"
+                                        FontFamily="MainFont"
+                                        FontSize="20"
+                                        HorizontalOptions="StartAndExpand"
+                                        LineBreakMode="TailTruncation"
+                                        MaxLines="1"
+                                        Text="10 mb/s"
+                                        TextColor="#FF00EE"
+                                        VerticalOptions="CenterAndExpand"
+                                        VerticalTextAlignment="Center" />
+                                </StackLayout>
+
+                            </Frame>
+                        </Grid>
+
+
+                    </Frame>
+                </Frame>
+
+                <Frame Margin="16,0,16,10" Padding="0">
+                    <StackLayout Spacing="0">
+                        <StackLayout Margin="16" Orientation="Horizontal">
+                            <Label
+                                FontAttributes="Bold"
+                                FontFamily="MainFont"
+                                FontSize="14"
+                                HorizontalOptions="StartAndExpand"
+                                LineBreakMode="TailTruncation"
+                                MaxLines="1"
+                                Text="Jan, 2021"
+                                TextColor="Black"
+                                VerticalOptions="CenterAndExpand"
+                                VerticalTextAlignment="Center" />
+                            <Frame
+                                Padding="0"
+                                BackgroundColor="#FFF0E5"
+                                CornerRadius="16"
+                                HasShadow="False"
+                                HeightRequest="32"
+                                HorizontalOptions="EndAndExpand"
+                                WidthRequest="32">
+                                <Image
+                                    Margin="5"
+                                    Aspect="AspectFit"
+                                    HeightRequest="28"
+                                    HorizontalOptions="CenterAndExpand"
+                                    VerticalOptions="CenterAndExpand">
+                                    <Image.Source>
+                                        <FontImageSource
+                                            FontFamily="Icon"
+                                            Glyph="&#xFb42;"
+                                            Size="28"
+                                            Color="Black" />
+                                    </Image.Source>
+                                </Image>
+                            </Frame>
+
+                        </StackLayout>
+                        <BoxView
+                            Margin="0"
+                            BackgroundColor="Black"
+                            HeightRequest="0.1"
+                            HorizontalOptions="FillAndExpand" />
+
+                        <Grid
+                            BackgroundColor="Black"
+                            ColumnSpacing="0"
+                            HorizontalOptions="StartAndExpand"
+                            RowSpacing="0"
+                            VerticalOptions="FillAndExpand">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <StackLayout
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                Margin="0,0,0.25,0"
+                                Padding="10,15"
+                                BackgroundColor="White"
+                                Spacing="0">
+                                <Label
+                                    FontAttributes="Bold"
+                                    FontFamily="MainFont"
+                                    FontSize="12"
+                                    HorizontalOptions="CenterAndExpand"
+                                    LineBreakMode="TailTruncation"
+                                    MaxLines="1"
+                                    Text="Data Consumed"
+                                    TextColor="{StaticResource MainColor}"
+                                    VerticalOptions="CenterAndExpand"
+                                    VerticalTextAlignment="Center" />
+
+                                <Label
+                                    FontAttributes="Bold"
+                                    FontFamily="MainFont"
+                                    FontSize="20"
+                                    HorizontalOptions="CenterAndExpand"
+                                    LineBreakMode="TailTruncation"
+                                    MaxLines="1"
+                                    Text="56.8 GB"
+                                    TextColor="{StaticResource MainColor}"
+                                    VerticalOptions="CenterAndExpand"
+                                    VerticalTextAlignment="Center" />
+                            </StackLayout>
+
+                            <StackLayout
+                                Grid.Row="0"
+                                Grid.Column="1"
+                                Margin="0.25,0"
+                                Padding="10,15"
+                                BackgroundColor="White"
+                                Spacing="0">
+                                <Label
+                                    FontAttributes="Bold"
+                                    FontFamily="MainFont"
+                                    FontSize="12"
+                                    HorizontalOptions="CenterAndExpand"
+                                    LineBreakMode="TailTruncation"
+                                    MaxLines="1"
+                                    Text="Broadband"
+                                    TextColor="#009DFF"
+                                    VerticalOptions="CenterAndExpand"
+                                    VerticalTextAlignment="Center" />
+
+                                <Label
+                                    FontAttributes="Bold"
+                                    FontFamily="MainFont"
+                                    FontSize="20"
+                                    HorizontalOptions="CenterAndExpand"
+                                    LineBreakMode="TailTruncation"
+                                    MaxLines="1"
+                                    Text="56.8 GB"
+                                    TextColor="#009DFF"
+                                    VerticalOptions="CenterAndExpand"
+                                    VerticalTextAlignment="Center" />
+                            </StackLayout>
+
+                            <StackLayout
+                                Grid.Row="0"
+                                Grid.Column="2"
+                                Margin="0.25,0,0,0"
+                                Padding="10,15"
+                                BackgroundColor="White"
+                                Spacing="0">
+                                <Label
+                                    FontAttributes="Bold"
+                                    FontFamily="MainFont"
+                                    FontSize="12"
+                                    HorizontalOptions="CenterAndExpand"
+                                    LineBreakMode="TailTruncation"
+                                    MaxLines="1"
+                                    Text="Ultra Boost"
+                                    TextColor="#22D165"
+                                    VerticalOptions="CenterAndExpand"
+                                    VerticalTextAlignment="Center" />
+
+                                <Label
+                                    FontAttributes="Bold"
+                                    FontFamily="MainFont"
+                                    FontSize="20"
+                                    HorizontalOptions="CenterAndExpand"
+                                    LineBreakMode="TailTruncation"
+                                    MaxLines="1"
+                                    Text="0 GB"
+                                    TextColor="#22D165"
+                                    VerticalOptions="CenterAndExpand"
+                                    VerticalTextAlignment="Center" />
+                            </StackLayout>
+                        </Grid>
+
+                    </StackLayout>
+                </Frame>
+
+                <StackLayout
+                    Margin="0,0,0,16"
+                    Padding="14"
+                    BackgroundColor="White"
+                    Spacing="0">
+
+                    <Label
+                        Margin="16,0,16,10"
+                        FontAttributes="Bold"
+                        FontFamily="MainFont"
+                        FontSize="16"
+                        HorizontalOptions="StartAndExpand"
+                        LineBreakMode="TailTruncation"
+                        MaxLines="1"
+                        Text="Connected devices"
+                        TextColor="Black"
+                        VerticalOptions="CenterAndExpand"
+                        VerticalTextAlignment="Center" />
+
+                    <BoxView
+                        BackgroundColor="Black"
+                        HeightRequest="0.1"
+                        HorizontalOptions="FillAndExpand" />
+
+
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>

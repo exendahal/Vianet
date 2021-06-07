@@ -11,10 +11,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Font\materialdesignicons-webfont.ttf" />
     <None Remove="Font\PoppinsMedium.ttf" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Font\materialdesignicons-webfont.ttf" />
     <EmbeddedResource Include="Font\PoppinsMedium.ttf" />
   </ItemGroup>
 
@@ -25,6 +27,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="Views\HomePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\LanguageSelection.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
