@@ -3,10 +3,13 @@
     x:Class="Vianet.Views.HomePage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Name="HPage"
     BackgroundColor="#F4F8FB"
+    Shell.NavBarHasShadow="False"
     Visual="Material">
 
-    <NavigationPage.TitleView>
+
+    <Shell.TitleView>
         <StackLayout
             HorizontalOptions="FillAndExpand"
             Orientation="Horizontal"
@@ -39,8 +42,9 @@
                 </Image.Source>
             </Image>
         </StackLayout>
-    </NavigationPage.TitleView>
+    </Shell.TitleView>
     <ContentPage.Content>
+
         <ScrollView>
             <StackLayout>
                 <Frame
@@ -353,6 +357,8 @@
                                 TextColor="Black"
                                 VerticalOptions="CenterAndExpand"
                                 VerticalTextAlignment="Center" />
+
+                            <DatePicker x:Name="datePicker" IsVisible="False" />
                             <Frame
                                 Padding="0"
                                 BackgroundColor="#FFF0E5"
@@ -375,6 +381,9 @@
                                             Color="Black" />
                                     </Image.Source>
                                 </Image>
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_datePickerFocus" />
+                                </Frame.GestureRecognizers>
                             </Frame>
 
                         </StackLayout>
@@ -522,7 +531,100 @@
                         BackgroundColor="Black"
                         HeightRequest="0.1"
                         HorizontalOptions="FillAndExpand" />
+                    <StackLayout x:Name="BindCollection" Margin="0,15,0,5">
+                        <BindableLayout.ItemTemplate>
+                            <DataTemplate>
+                                <StackLayout Orientation="Horizontal">
 
+                                    <StackLayout Spacing="0">
+                                        <Frame
+                                            Padding="0"
+                                            BackgroundColor="#FFF0E5"
+                                            CornerRadius="16"
+                                            HasShadow="False"
+                                            HeightRequest="32"
+                                            HorizontalOptions="CenterAndExpand"
+                                            VerticalOptions="CenterAndExpand"
+                                            WidthRequest="32">
+                                            <Image
+                                                Margin="5"
+                                                Aspect="AspectFit"
+                                                HeightRequest="28"
+                                                HorizontalOptions="CenterAndExpand"
+                                                VerticalOptions="CenterAndExpand">
+                                                <Image.Source>
+                                                    <FontImageSource
+                                                        FontFamily="Icon"
+                                                        Glyph="{Binding item1}"
+                                                        Size="28"
+                                                        Color="{StaticResource MainColor}" />
+                                                </Image.Source>
+                                            </Image>
+
+
+                                        </Frame>
+
+                                        <Label
+                                            Margin="0,3"
+                                            FontFamily="MainFont"
+                                            FontSize="8"
+                                            HorizontalOptions="CenterAndExpand"
+                                            LineBreakMode="TailTruncation"
+                                            MaxLines="1"
+                                            Text="{Binding item2}"
+                                            TextColor="#999999"
+                                            VerticalOptions="CenterAndExpand"
+                                            VerticalTextAlignment="Center" />
+                                    </StackLayout>
+
+                                    <StackLayout
+                                        HorizontalOptions="CenterAndExpand"
+                                        Spacing="0"
+                                        VerticalOptions="CenterAndExpand">
+                                        <Label
+                                            FontFamily="MainFont"
+                                            FontSize="12"
+                                            HorizontalOptions="StartAndExpand"
+                                            LineBreakMode="TailTruncation"
+                                            MaxLines="1"
+                                            Text="{Binding item3}"
+                                            TextColor="#333333"
+                                            VerticalOptions="CenterAndExpand"
+                                            VerticalTextAlignment="Center" />
+
+                                        <Label
+                                            FontFamily="MainFont"
+                                            FontSize="10"
+                                            HorizontalOptions="StartAndExpand"
+                                            LineBreakMode="TailTruncation"
+                                            MaxLines="1"
+                                            Text="{Binding item4}"
+                                            TextColor="#666666"
+                                            VerticalOptions="CenterAndExpand"
+                                            VerticalTextAlignment="Center" />
+                                    </StackLayout>
+
+                                    <Label
+                                        FontAttributes="Bold"
+                                        FontFamily="MainFont"
+                                        FontSize="16"
+                                        HorizontalOptions="EndAndExpand"
+                                        LineBreakMode="TailTruncation"
+                                        MaxLines="1"
+                                        Text="Disconnect"
+                                        TextColor="{StaticResource MainColor}"
+                                        VerticalOptions="CenterAndExpand"
+                                        VerticalTextAlignment="Center">
+                                        <Label.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding Source={x:Reference HPage}, Path=BindingContext.TapCommand}" CommandParameter="{Binding .}" />
+                                        </Label.GestureRecognizers>
+                                    </Label>
+
+
+                                </StackLayout>
+                            </DataTemplate>
+                        </BindableLayout.ItemTemplate>
+                    </StackLayout>
 
                 </StackLayout>
             </StackLayout>

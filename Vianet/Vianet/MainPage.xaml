@@ -1,24 +1,60 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Vianet.MainPage">
+<Shell
+    x:Class="Vianet.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:Vianet.Views">
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Color x:Key="NavigationPrimary">#2196F3</Color>
+            <Style x:Key="BaseStyle" TargetType="Element">
+                <Setter Property="Shell.BackgroundColor" Value="White" />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="White" />
+                <Setter Property="Shell.TabBarUnselectedColor" Value="#999999" />
+                <Setter Property="Shell.TabBarTitleColor" Value="{StaticResource MainColor}" />
+            </Style>
+            <Style BasedOn="{StaticResource BaseStyle}" TargetType="TabBar" />
+        </ResourceDictionary>
+    </Shell.Resources>
 
-    <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
-        </Frame>
-        <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
-        <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
-        <Label FontSize="16" Padding="30,24,30,0">
-            <Label.FormattedText>
-                <FormattedString>
-                    <FormattedString.Spans>
-                        <Span Text="Learn more at "/>
-                        <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
-                    </FormattedString.Spans>
-                </FormattedString>
-            </Label.FormattedText>
-        </Label>
-    </StackLayout>
+    <TabBar>
+        <Tab Title="Home">
+            <ShellContent ContentTemplate="{DataTemplate views:HomePage}" />
+            <Tab.Icon>
+                <FontImageSource
+                    FontFamily="Icon"
+                    Glyph="&#xf6a0;"
+                    Size="Medium" />
+            </Tab.Icon>
+        </Tab>
+        <Tab Title="Billing">
+            <ShellContent ContentTemplate="{DataTemplate views:HomePage}" />
+            <Tab.Icon>
+                <FontImageSource
+                    FontFamily="Icon"
+                    Glyph="&#xf19b;"
+                    Size="Medium" />
+            </Tab.Icon>
+        </Tab>
+        <Tab Title="Support">
+            <ShellContent ContentTemplate="{DataTemplate views:HomePage}" />
+            <Tab.Icon>
+                <FontImageSource
+                    FontFamily="Icon"
+                    Glyph="&#xf625;"
+                    Size="Medium" />
+            </Tab.Icon>
+        </Tab>
+        <Tab Title="Account">
+            <ShellContent ContentTemplate="{DataTemplate views:HomePage}" />
+            <Tab.Icon>
+                <FontImageSource
+                    FontFamily="Icon"
+                    Glyph="&#xfb31;"
+                    Size="Medium" />
+            </Tab.Icon>
+        </Tab>
+    </TabBar>
 
-</ContentPage>
+</Shell>
+
