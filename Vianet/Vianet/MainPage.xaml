@@ -28,7 +28,7 @@
             </Tab.Icon>
         </Tab>
         <Tab Title="Billing">
-            <ShellContent ContentTemplate="{DataTemplate views:HomePage}" />
+            <ShellContent ContentTemplate="{DataTemplate views:Billing}" />
             <Tab.Icon>
                 <FontImageSource
                     FontFamily="Icon"
@@ -37,7 +37,7 @@
             </Tab.Icon>
         </Tab>
         <Tab Title="Support">
-            <ShellContent ContentTemplate="{DataTemplate views:HomePage}" />
+            <ShellContent ContentTemplate="{DataTemplate views:Support}" />
             <Tab.Icon>
                 <FontImageSource
                     FontFamily="Icon"
@@ -46,7 +46,7 @@
             </Tab.Icon>
         </Tab>
         <Tab Title="Account">
-            <ShellContent ContentTemplate="{DataTemplate views:HomePage}" />
+            <ShellContent ContentTemplate="{DataTemplate views:About}" />
             <Tab.Icon>
                 <FontImageSource
                     FontFamily="Icon"
