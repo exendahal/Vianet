@@ -377,8 +377,8 @@
                                         <FontImageSource
                                             FontFamily="Icon"
                                             Glyph="&#xFb42;"
-                                            Size="28"
-                                            Color="Black" />
+                                            Size="24"
+                                            Color="{StaticResource MainColor}" />
                                     </Image.Source>
                                 </Image>
                                 <Frame.GestureRecognizers>
