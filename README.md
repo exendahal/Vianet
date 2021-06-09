@@ -8,6 +8,7 @@ Learn More: https://docs.microsoft.com/en-us/xamarin/xamarin-forms/
 * ColletionView
 * TabbedPage
 * Font Icon
+* Shell
 
 ## Generate C# code from icon font
 Link: https://andreinitescu.github.io/IconFont2Code/
@@ -15,3 +16,5 @@ Link: https://andreinitescu.github.io/IconFont2Code/
 ## Available Platforms
 * Android
 * Ios
+
+
