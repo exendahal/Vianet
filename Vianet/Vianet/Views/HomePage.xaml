@@ -72,15 +72,26 @@
 
                     <StackLayout Spacing="0">
                         <Frame
-                            Margin="30"
+                            Margin="24"
                             Padding="0"
-                            BackgroundColor="#F7F6FB"
                             CornerRadius="97"
                             HasShadow="False"
                             HeightRequest="194"
                             HorizontalOptions="CenterAndExpand"
                             VerticalOptions="CenterAndExpand"
-                            WidthRequest="194" />
+                            WidthRequest="194">
+                            <WebView
+                                x:Name="graph"
+                                BackgroundColor="Transparent"
+                                HeightRequest="164"
+                                HorizontalOptions="Center"
+                                VerticalOptions="FillAndExpand"
+                                WidthRequest="164">
+                                <WebView.Source>
+                                    <HtmlWebViewSource Html="{Binding ReportHtml}" />
+                                </WebView.Source>
+                            </WebView>
+                        </Frame>
 
                         <Label
                             FontAttributes="Bold"

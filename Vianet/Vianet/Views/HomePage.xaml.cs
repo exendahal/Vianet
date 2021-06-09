@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,12 +15,18 @@ namespace Vianet.Views
     public partial class HomePage : ContentPage
     {
         public ICommand TapCommand { get; set; }
+        
         public HomePage()
         {
             BindingContext = this;
             InitializeComponent();
             addCommand();
             createCOllection();
+            var chartConfigScript = GetChartScript();
+            var html = GetHtmlWithChartConfig(chartConfigScript);
+            var htmlSource = new HtmlWebViewSource();
+            htmlSource.Html = html;
+            graph.Source = htmlSource;
         }
          void addCommand()
         {
@@ -43,6 +50,94 @@ namespace Vianet.Views
         private void TapGestureRecognizer_Tapped_datePickerFocus(object sender, EventArgs e)
         {
             datePicker.Focus();
+        }
+
+        private string GetHtmlWithChartConfig(string chartConfig)
+        {
+            var inlineStyle = "style=\"width:100%;height:100%;\"";
+            var chartJsScript = "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js\"></script>";
+            var chartConfigJsScript = $"<script>{chartConfig}</script>";
+            var chartContent = $@"<div id=""chart-container"" {inlineStyle}>
+  <canvas id=""chart"" />
+</div>";
+            var document = $@"<html style=""width:97%;height:100%;"">
+  <head>{chartJsScript}</head>
+  <body {inlineStyle}>
+    {chartContent}
+    {chartConfigJsScript}
+  </body>
+</html>";
+            return document;
+        }
+
+        private string GetChartScript()
+        {
+            var chartConfig = GetSpendingChartConfig();
+            var script = $@"var config = {chartConfig};
+window.onload = function() {{
+  var canvasContext = document.getElementById(""chart"").getContext(""2d"");
+  new Chart(canvasContext, config);
+}};";
+            return script;
+        }
+
+        private string GetSpendingChartConfig()
+        {
+            var config = new
+            {
+                type = "doughnut",
+                data = GetPieChartData(),
+                options = new
+                {
+                    responsive = true,
+                    maintainAspectRatio = false,
+                    //legend = new
+                    //{
+                    //    position = "top"
+                    //},
+                    animation = new
+                    {
+                        animateScale = true
+                    }
+                }
+            };
+            var jsonConfig = JsonConvert.SerializeObject(config);
+            return jsonConfig;
+        }
+
+        private object GetPieChartData()
+        {
+            var colors = GetDefaultColors();
+            var labels = new[] { "Gone", "Remaining" };
+           // var randomGen = new Random();
+            var dataPoints = new[] { 325, 40 };
+            var data = new
+            {
+                datasets = new[]
+                {
+                    new
+                    {                        
+                        data = dataPoints,
+                        backgroundColor = dataPoints.Select((d, i) =>
+                        {
+                            var color = colors[i % colors.Count];
+                            return $"rgb({color.Item1},{color.Item2},{color.Item3})";
+                        })
+                    }
+                },
+                //labels
+            };
+            return data;
+        }
+
+        private List<Tuple<int, int, int>> GetDefaultColors()
+        {
+            return new List<Tuple<int, int, int>>
+            {
+                new Tuple<int, int, int>(236,28,36),
+                new Tuple<int, int, int>(247,246,251)
+               
+            };
         }
     }
 }
