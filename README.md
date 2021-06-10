@@ -5,8 +5,7 @@ Xamarin Forms 5.0<br>
 Learn More: https://docs.microsoft.com/en-us/xamarin/xamarin-forms/
 
 ## Features
-* ColletionView
-* TabbedPage
+* Bindable Layout
 * Font Icon
 * Shell
 
