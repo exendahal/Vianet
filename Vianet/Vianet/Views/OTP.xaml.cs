@@ -20,8 +20,10 @@ namespace Vianet.Views
 
         private async void TapGestureRecognizer_Tapped_Next(object sender, System.EventArgs e)
         {
-            Application.Current.MainPage = new NavigationPage(new HomePage());
+           
+            Application.Current.MainPage = (new MainPage());
             await PopupNavigation.Instance.PopAllAsync();
+
         }
     }
 }
