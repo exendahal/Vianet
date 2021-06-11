@@ -3,6 +3,7 @@
     x:Class="Vianet.Views.Billing"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Name="BillPage"
     BackgroundColor="#F4F8FB"
     Shell.NavBarHasShadow="False"
     Visual="Material">
@@ -41,8 +42,313 @@
         </StackLayout>
     </Shell.TitleView>
     <ContentPage.Content>
-        <StackLayout>
-            
-        </StackLayout>
+
+        <ScrollView>
+            <StackLayout Padding="14" Spacing="0">
+                <StackLayout Spacing="0">
+                    <Label
+                        FontAttributes="Bold"
+                        FontFamily="MainFont"
+                        FontSize="16"
+                        HorizontalOptions="StartAndExpand"
+                        LineBreakMode="TailTruncation"
+                        MaxLines="1"
+                        Text="Popular Plans"
+                        TextColor="Black"
+                        VerticalOptions="CenterAndExpand"
+                        VerticalTextAlignment="Center" />
+
+                    <CollectionView
+                        x:Name="list"
+                        Margin="0,12"
+                        HeightRequest="120"
+                        VerticalOptions="CenterAndExpand">
+                        <CollectionView.ItemsLayout>
+                            <LinearItemsLayout ItemSpacing="14" Orientation="Horizontal" />
+                        </CollectionView.ItemsLayout>
+                        <CollectionView.ItemTemplate>
+
+                            <DataTemplate>
+                                <Frame
+                                    Padding="0"
+                                    BackgroundColor="White"
+                                    CornerRadius="2"
+                                    HasShadow="True">
+                                    <StackLayout Spacing="0">
+                                        <StackLayout Padding="16" Spacing="0">
+                                            <StackLayout
+                                                HorizontalOptions="CenterAndExpand"
+                                                Spacing="0"
+                                                VerticalOptions="CenterAndExpand">
+                                                <Label
+                                                    FontFamily="MainFont"
+                                                    FontSize="20"
+                                                    HorizontalOptions="StartAndExpand"
+                                                    LineBreakMode="TailTruncation"
+                                                    MaxLines="1"
+                                                    Text="20 Mb/s"
+                                                    TextColor="#009DFF"
+                                                    VerticalOptions="CenterAndExpand"
+                                                    VerticalTextAlignment="Center" />
+
+                                                <StackLayout Orientation="Horizontal">
+
+                                                    <Label
+                                                        FontAttributes="Bold"
+                                                        FontFamily="MainFont"
+                                                        FontSize="14"
+                                                        HorizontalOptions="StartAndExpand"
+                                                        LineBreakMode="TailTruncation"
+                                                        MaxLines="1"
+                                                        Text="Unlimited"
+                                                        TextColor="Black"
+                                                        VerticalOptions="CenterAndExpand"
+                                                        VerticalTextAlignment="Center" />
+
+
+                                                    <Label
+                                                        FontFamily="MainFont"
+                                                        FontSize="10"
+                                                        HorizontalOptions="StartAndExpand"
+                                                        LineBreakMode="TailTruncation"
+                                                        MaxLines="1"
+                                                        Text="Validty: 34 days"
+                                                        TextColor="#999999"
+                                                        VerticalOptions="CenterAndExpand"
+                                                        VerticalTextAlignment="Center" />
+                                                </StackLayout>
+
+
+                                            </StackLayout>
+                                        </StackLayout>
+                                        <BoxView BackgroundColor="black" HeightRequest="0.1" />
+                                        <Label
+                                            Margin="10,0"
+                                            FontAttributes="Bold"
+                                            FontFamily="MainFont"
+                                            FontSize="10"
+                                            HorizontalOptions="EndAndExpand"
+                                            LineBreakMode="TailTruncation"
+                                            MaxLines="1"
+                                            Text="View Details &gt;&gt;"
+                                            TextColor="{StaticResource MainColor}"
+                                            VerticalOptions="CenterAndExpand" />
+
+                                    </StackLayout>
+                                </Frame>
+
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+
+                    <Frame
+                        Margin="0,5"
+                        Padding="0"
+                        BackgroundColor="White"
+                        CornerRadius="2"
+                        HasShadow="True">
+                        <StackLayout
+                            Padding="16"
+                            Orientation="Horizontal"
+                            Spacing="0">
+                            <StackLayout VerticalOptions="CenterAndExpand">
+                                <Image Aspect="AspectFit" HeightRequest="32">
+                                    <Image.Source>
+                                        <FontImageSource
+                                            FontFamily="Icon"
+                                            Glyph="&#xFcce;"
+                                            Size="32"
+                                            Color="{StaticResource MainColor}" />
+                                    </Image.Source>
+                                </Image>
+                            </StackLayout>
+
+                            <StackLayout Margin="15,0" Spacing="0">
+
+                                <StackLayout Orientation="Horizontal">
+                                    <Label
+                                        FontAttributes="Bold"
+                                        FontFamily="MainFont"
+                                        FontSize="14"
+                                        LineBreakMode="TailTruncation"
+                                        MaxLines="1"
+                                        Text="New Offers"
+                                        TextColor="Black"
+                                        VerticalOptions="CenterAndExpand"
+                                        VerticalTextAlignment="Center" />
+
+                                    <Label
+                                        FontAttributes="Bold"
+                                        FontFamily="MainFont"
+                                        FontSize="10"
+                                        LineBreakMode="TailTruncation"
+                                        MaxLines="1"
+                                        Text="Only for you, avail today"
+                                        TextColor="#999999"
+                                        VerticalOptions="CenterAndExpand"
+                                        VerticalTextAlignment="Center" />
+                                </StackLayout>
+
+                                <StackLayout Orientation="Horizontal" Spacing="0">
+                                    <Label
+                                        FontAttributes="Bold"
+                                        FontFamily="MainFont"
+                                        FontSize="10"
+                                        MaxLines="1"
+                                        Text="Valid Upto"
+                                        TextColor="#999999"
+                                        VerticalOptions="CenterAndExpand"
+                                        VerticalTextAlignment="Center" />
+
+                                    <Label
+                                        Margin="10,0"
+                                        FontAttributes="Bold"
+                                        FontFamily="MainFont"
+                                        FontSize="20"
+                                        LineBreakMode="TailTruncation"
+                                        MaxLines="1"
+                                        Text="JUNE 30, 2021"
+                                        TextColor="{StaticResource MainColor}"
+                                        VerticalOptions="CenterAndExpand"
+                                        VerticalTextAlignment="Center" />
+                                </StackLayout>
+
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+
+                    <StackLayout
+                        Margin="0,15"
+                        BackgroundColor="White"
+                        Spacing="0">
+                        <CollectionView
+                            x:Name="list2"
+                            Margin="10,0"
+                            HeightRequest="24"
+                            VerticalOptions="CenterAndExpand">
+                            <CollectionView.ItemsLayout>
+                                <LinearItemsLayout ItemSpacing="30" Orientation="Horizontal" />
+                            </CollectionView.ItemsLayout>
+                            <CollectionView.ItemTemplate>
+
+                                <DataTemplate>
+                                    <StackLayout>
+                                        <Label
+                                            FontAttributes="Bold"
+                                            FontFamily="MainFont"
+                                            FontSize="16"
+                                            HorizontalTextAlignment="Center"
+                                            Text="1 month"
+                                            TextColor="Black"
+                                            VerticalTextAlignment="Center" />
+                                        <StackLayout.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding Source={x:Reference BillPage}, Path=BindingContext.TapCommandMenu}" CommandParameter="{Binding .}" />
+                                        </StackLayout.GestureRecognizers>
+                                    </StackLayout>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+
+                        <StackLayout x:Name="BindCollection" Margin="0,15,0,5">
+                            <BindableLayout.ItemTemplate>
+                                <DataTemplate>
+                                    <StackLayout
+                                        Padding="16,0"
+                                        HorizontalOptions="FillAndExpand"
+                                        Orientation="Horizontal"
+                                        Spacing="0">
+                                        <Frame
+                                            Padding="0"
+                                            BackgroundColor="#F7F6FB"
+                                            CornerRadius="2"
+                                            HasShadow="False"
+                                            HorizontalOptions="StartAndExpand"
+                                            VerticalOptions="CenterAndExpand">
+
+                                            <StackLayout Margin="16,5" Spacing="0">
+                                                <Label
+                                                    FontFamily="MainFont"
+                                                    FontSize="14"
+                                                    HorizontalOptions="CenterAndExpand"
+                                                    LineBreakMode="TailTruncation"
+                                                    MaxLines="1"
+                                                    Text="6"
+                                                    TextColor="#1892DE"
+                                                    VerticalOptions="CenterAndExpand"
+                                                    VerticalTextAlignment="Center" />
+
+                                                <Label
+                                                    FontFamily="MainFont"
+                                                    FontSize="10"
+                                                    HorizontalOptions="CenterAndExpand"
+                                                    LineBreakMode="TailTruncation"
+                                                    MaxLines="1"
+                                                    Text="Mb/s"
+                                                    TextColor="#1892DE"
+                                                    VerticalOptions="CenterAndExpand"
+                                                    VerticalTextAlignment="Center" />
+                                            </StackLayout>
+
+
+
+                                        </Frame>
+
+                                        <StackLayout
+                                            Margin="20,0"
+                                            HorizontalOptions="StartAndExpand"
+                                            Spacing="0"
+                                            VerticalOptions="CenterAndExpand">
+                                            <Label
+                                                FontFamily="MainFont"
+                                                FontSize="12"
+                                                HorizontalOptions="StartAndExpand"
+                                                LineBreakMode="TailTruncation"
+                                                MaxLines="1"
+                                                Text="Unlimited"
+                                                TextColor="#333333"
+                                                VerticalOptions="CenterAndExpand"
+                                                VerticalTextAlignment="Center" />
+
+                                            <Label
+                                                FontFamily="MainFont"
+                                                FontSize="10"
+                                                HorizontalOptions="StartAndExpand"
+                                                LineBreakMode="TailTruncation"
+                                                MaxLines="1"
+                                                Text="Rs. 1450"
+                                                TextColor="#666666"
+                                                VerticalOptions="CenterAndExpand"
+                                                VerticalTextAlignment="Center" />
+                                        </StackLayout>
+
+
+                                        <Label
+                                            FontAttributes="Bold"
+                                            FontFamily="MainFont"
+                                            FontSize="10"
+                                            HorizontalOptions="EndAndExpand"
+                                            LineBreakMode="TailTruncation"
+                                            MaxLines="1"
+                                            Text="Buy Now &gt;&gt;"
+                                            TextColor="Black"
+                                            VerticalOptions="CenterAndExpand"
+                                            VerticalTextAlignment="Center">
+                                            <Label.GestureRecognizers>
+                                                <TapGestureRecognizer Command="{Binding Source={x:Reference BillPage}, Path=BindingContext.TapCommand}" CommandParameter="{Binding .}" />
+                                            </Label.GestureRecognizers>
+                                        </Label>
+                                    </StackLayout>
+                                </DataTemplate>
+                            </BindableLayout.ItemTemplate>
+                        </StackLayout>
+
+                    </StackLayout>
+
+
+                </StackLayout>
+
+            </StackLayout>
+        </ScrollView>
+
     </ContentPage.Content>
 </ContentPage>
