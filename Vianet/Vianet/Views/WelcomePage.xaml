@@ -3,6 +3,7 @@
     x:Class="Vianet.Views.WelcomePage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:helpers="clr-namespace:Vianet.Helper"
     xmlns:local="clr-namespace:Vianet.Language"
     BackgroundColor="{StaticResource MainColor}">
     <ContentPage.Content>
@@ -36,14 +37,14 @@
                         FontFamily="MainFont"
                         FontSize="26"
                         HorizontalOptions="CenterAndExpand"
-                        Text="{x:Static local:AppStringResources.welcome}"
+                        Text="{helpers:Translate welcome}"
                         TextColor="White"
                         VerticalOptions="CenterAndExpand" />
                     <Label
                         FontFamily="MainFont"
                         FontSize="14"
                         HorizontalOptions="CenterAndExpand"
-                        Text="{x:Static local:AppStringResources.welcomeText}"
+                        Text="{helpers:Translate welcomeText}"
                         TextColor="White"
                         VerticalOptions="CenterAndExpand" />
 
@@ -60,7 +61,7 @@
                             FontFamily="MainFont"
                             FontSize="16"
                             HorizontalOptions="CenterAndExpand"
-                            Text="{x:Static local:AppStringResources.newConnection}"
+                            Text="{helpers:Translate newConnection}"
                             TextColor="White"
                             VerticalOptions="CenterAndExpand" />
                     </Frame>
@@ -78,7 +79,7 @@
                             FontFamily="MainFont"
                             FontSize="16"
                             HorizontalOptions="CenterAndExpand"
-                            Text="{x:Static local:AppStringResources.login}"
+                            Text="{helpers:Translate login}"
                             TextColor="{StaticResource MainColor}"
                             VerticalOptions="CenterAndExpand" />
                         <Frame.GestureRecognizers>
@@ -99,7 +100,7 @@
                         FontFamily="MainFont"
                         FontSize="12"
                         HorizontalOptions="CenterAndExpand"
-                        Text="{x:Static local:AppStringResources.language}"
+                        Text="{helpers:Translate language}"
                         TextColor="White"
                         VerticalOptions="CenterAndExpand" />
 

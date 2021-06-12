@@ -26,6 +26,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="Xamarin.Essentials">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft\Xamarin\NuGet\xamarin.essentials\1.6.1\lib\monoandroid10.0\Xamarin.Essentials.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="Language\AppStringResources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>

@@ -3,6 +3,7 @@
     x:Class="Vianet.Views.OTP"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:helpers="clr-namespace:Vianet.Helper"
     xmlns:local="clr-namespace:Vianet.Language"
     xmlns:pages="http://rotorgames.com"
     xmlns:renderer="clr-namespace:Vianet.Renderer">
@@ -31,7 +32,7 @@
                     FontFamily="MainFont"
                     FontSize="24"
                     HorizontalOptions="StartAndExpand"
-                    Text="{x:Static local:AppStringResources.pinNumber}"
+                    Text="{helpers:Translate pinNumber}"
                     TextColor="{StaticResource MainColor}"
                     VerticalOptions="CenterAndExpand" />
 
@@ -54,7 +55,7 @@
                     <renderer:CustomEntry
                         x:Name="otp"
                         Keyboard="Numeric"
-                        Placeholder="{x:Static local:AppStringResources.pinNumber}" />
+                        Placeholder="{helpers:Translate pinNumber}" />
                 </Frame>
 
 
@@ -83,7 +84,7 @@
                             FontFamily="MainFont"
                             FontSize="16"
                             HorizontalOptions="CenterAndExpand"
-                            Text="{x:Static local:AppStringResources.next}"
+                            Text="{helpers:Translate next}"
                             TextColor="White"
                             VerticalOptions="CenterAndExpand" />
                         <ActivityIndicator
