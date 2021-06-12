@@ -19,7 +19,7 @@ Blog : https://blog.dangl.me/archive/building-hacky-but-free-graphs-and-charts-i
 
 ## Available Platforms
 * Android
-* Ios
+* iOS
 
 ## Preview
 <img  src="Screenshot/1.png" width="320" height="450"> <img src="Screenshot/2.png" width="320" height="450">  <br>
