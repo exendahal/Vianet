@@ -6,6 +6,7 @@ Learn More: https://docs.microsoft.com/en-us/xamarin/xamarin-forms/
 
 ## Features
 * Bindable Layout
+* Collection View
 * Font Icon
 * Shell
 
