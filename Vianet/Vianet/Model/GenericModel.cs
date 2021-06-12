@@ -10,6 +10,7 @@ namespace Vianet.Model
         public string item2 { get; set; }
         public string item3 { get; set; }
         public string item4 { get; set; }
+        public int item5 { get; set; }
 
     }
 }

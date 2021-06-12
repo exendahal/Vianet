@@ -86,7 +86,7 @@
                                                     HorizontalOptions="StartAndExpand"
                                                     LineBreakMode="TailTruncation"
                                                     MaxLines="1"
-                                                    Text="20 Mb/s"
+                                                    Text="{Binding item1, StringFormat='{0} Mb/s'}"
                                                     TextColor="#009DFF"
                                                     VerticalOptions="CenterAndExpand"
                                                     VerticalTextAlignment="Center" />
@@ -100,7 +100,7 @@
                                                         HorizontalOptions="StartAndExpand"
                                                         LineBreakMode="TailTruncation"
                                                         MaxLines="1"
-                                                        Text="Unlimited"
+                                                        Text="{Binding item2}"
                                                         TextColor="Black"
                                                         VerticalOptions="CenterAndExpand"
                                                         VerticalTextAlignment="Center" />
@@ -112,7 +112,7 @@
                                                         HorizontalOptions="StartAndExpand"
                                                         LineBreakMode="TailTruncation"
                                                         MaxLines="1"
-                                                        Text="Validty: 34 days"
+                                                        Text="{Binding item3, StringFormat='Validty: {0} days'}"
                                                         TextColor="#999999"
                                                         VerticalOptions="CenterAndExpand"
                                                         VerticalTextAlignment="Center" />
@@ -218,12 +218,12 @@
                     </Frame>
 
                     <StackLayout
-                        Margin="0,15"
+                        Margin="0,16"
                         BackgroundColor="White"
                         Spacing="0">
                         <CollectionView
                             x:Name="list2"
-                            Margin="10,0"
+                            Margin="10"
                             HeightRequest="24"
                             VerticalOptions="CenterAndExpand">
                             <CollectionView.ItemsLayout>
@@ -238,8 +238,8 @@
                                             FontFamily="MainFont"
                                             FontSize="16"
                                             HorizontalTextAlignment="Center"
-                                            Text="1 month"
-                                            TextColor="Black"
+                                            Text="{Binding value, StringFormat='{0} Month'}"
+                                            TextColor="{Binding TxtColor}"
                                             VerticalTextAlignment="Center" />
                                         <StackLayout.GestureRecognizers>
                                             <TapGestureRecognizer Command="{Binding Source={x:Reference BillPage}, Path=BindingContext.TapCommandMenu}" CommandParameter="{Binding .}" />
@@ -249,7 +249,10 @@
                             </CollectionView.ItemTemplate>
                         </CollectionView>
 
-                        <StackLayout x:Name="BindCollection" Margin="0,15,0,5">
+                        <StackLayout
+                            x:Name="BindCollection"
+                            Margin="0,8,0,5"
+                            VerticalOptions="FillAndExpand">
                             <BindableLayout.ItemTemplate>
                                 <DataTemplate>
                                     <StackLayout
@@ -272,7 +275,7 @@
                                                     HorizontalOptions="CenterAndExpand"
                                                     LineBreakMode="TailTruncation"
                                                     MaxLines="1"
-                                                    Text="6"
+                                                    Text="{Binding item1}"
                                                     TextColor="#1892DE"
                                                     VerticalOptions="CenterAndExpand"
                                                     VerticalTextAlignment="Center" />
@@ -304,7 +307,7 @@
                                                 HorizontalOptions="StartAndExpand"
                                                 LineBreakMode="TailTruncation"
                                                 MaxLines="1"
-                                                Text="Unlimited"
+                                                Text="{Binding item2}"
                                                 TextColor="#333333"
                                                 VerticalOptions="CenterAndExpand"
                                                 VerticalTextAlignment="Center" />
@@ -315,7 +318,7 @@
                                                 HorizontalOptions="StartAndExpand"
                                                 LineBreakMode="TailTruncation"
                                                 MaxLines="1"
-                                                Text="Rs. 1450"
+                                                Text="{Binding item4, StringFormat='Rs. {0}'}"
                                                 TextColor="#666666"
                                                 VerticalOptions="CenterAndExpand"
                                                 VerticalTextAlignment="Center" />
