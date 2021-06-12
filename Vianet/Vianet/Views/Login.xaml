@@ -3,6 +3,7 @@
     x:Class="Vianet.Views.Login"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Vianet.Language"
     xmlns:pages="http://rotorgames.com"
     xmlns:renderer="clr-namespace:Vianet.Renderer">
     <pages:PopupPage.Animation>
@@ -30,7 +31,7 @@
                     FontFamily="MainFont"
                     FontSize="24"
                     HorizontalOptions="StartAndExpand"
-                    Text="Login"
+                    Text="{x:Static local:AppStringResources.login}"
                     TextColor="{StaticResource MainColor}"
                     VerticalOptions="CenterAndExpand" />
 
@@ -40,7 +41,7 @@
                     FontFamily="MainFont"
                     FontSize="12"
                     HorizontalOptions="StartAndExpand"
-                    Text="Lets get started"
+                    Text="{x:Static local:AppStringResources.letsStart}"
                     VerticalOptions="CenterAndExpand" />
 
 
@@ -53,7 +54,7 @@
                     <renderer:CustomEntry
                         x:Name="mobile"
                         Keyboard="Numeric"
-                        Placeholder="Mobile Number" />
+                        Placeholder="{x:Static local:AppStringResources.mobileNumber}" />
                 </Frame>
 
 
@@ -70,7 +71,7 @@
                         FontFamily="MainFont"
                         FontSize="16"
                         HorizontalOptions="CenterAndExpand"
-                        Text="CONTINUE"
+                        Text="{x:Static local:AppStringResources.next}"
                         TextColor="White"
                         VerticalOptions="CenterAndExpand" />
                     <Frame.GestureRecognizers>

@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
@@ -50,6 +52,8 @@ namespace Vianet.Views
             nepaliText.TextColor = Color.FromHex("#999999");
             nepLang.TextColor = (Color)Application.Current.Resources["MainColor"];
             Application.Current.Properties["isEnglish"] = "1";
+            //CultureInfo cultureInfo = new CultureInfo("en-US");
+            //Thread.CurrentThread.CurrentUICulture = cultureInfo;
             MessagingCenter.Send(this, "Language", "English");
         }
 
@@ -63,6 +67,8 @@ namespace Vianet.Views
             englishText.TextColor = Color.FromHex("#999999"); 
             langColor.TextColor = (Color)Application.Current.Resources["MainColor"];
             Application.Current.Properties["isEnglish"] = "0";
+            //CultureInfo cultureInfo = new CultureInfo("ne-NP");
+            //Thread.CurrentThread.CurrentCulture = cultureInfo;
             MessagingCenter.Send(this, "Language", "नेपाली");
 
         }

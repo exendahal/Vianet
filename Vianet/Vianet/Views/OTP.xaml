@@ -3,6 +3,7 @@
     x:Class="Vianet.Views.OTP"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Vianet.Language"
     xmlns:pages="http://rotorgames.com"
     xmlns:renderer="clr-namespace:Vianet.Renderer">
     <pages:PopupPage.Animation>
@@ -30,7 +31,7 @@
                     FontFamily="MainFont"
                     FontSize="24"
                     HorizontalOptions="StartAndExpand"
-                    Text="OTP"
+                    Text="{x:Static local:AppStringResources.pinNumber}"
                     TextColor="{StaticResource MainColor}"
                     VerticalOptions="CenterAndExpand" />
 
@@ -40,7 +41,7 @@
                     FontFamily="MainFont"
                     FontSize="12"
                     HorizontalOptions="StartAndExpand"
-                    Text="Enter OTP to Continue"
+                    Text="{x:Static local:AppStringResources.pinMessage}"
                     VerticalOptions="CenterAndExpand" />
 
 
@@ -53,7 +54,7 @@
                     <renderer:CustomEntry
                         x:Name="otp"
                         Keyboard="Numeric"
-                        Placeholder="OTP Code" />
+                        Placeholder="{x:Static local:AppStringResources.pinNumber}" />
                 </Frame>
 
 
@@ -82,7 +83,7 @@
                             FontFamily="MainFont"
                             FontSize="16"
                             HorizontalOptions="CenterAndExpand"
-                            Text="FINISH"
+                            Text="{x:Static local:AppStringResources.next}"
                             TextColor="White"
                             VerticalOptions="CenterAndExpand" />
                         <ActivityIndicator
