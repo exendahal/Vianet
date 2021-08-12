@@ -9,6 +9,7 @@ Learn More: https://docs.microsoft.com/en-us/xamarin/xamarin-forms/
 * Collection View
 * Font Icon
 * Shell
+* Localization
 
 ## Generate C# code from icon font
 Link: https://andreinitescu.github.io/IconFont2Code/
