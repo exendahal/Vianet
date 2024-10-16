@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31321.278
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35122.118
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vianet.Android", "Vianet\Vianet.Android\Vianet.Android.csproj", "{3A75160C-42E5-4992-8DCC-129E1D366756}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vianet.iOS", "Vianet\Vianet.iOS\Vianet.iOS.csproj", "{CA424EA9-DA5E-4979-A58F-D37B59AADAFC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vianet", "Vianet\Vianet\Vianet.csproj", "{CE126AF9-4A36-4FD5-B6CB-39F53B6DB62F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vianet", "Vianet\Vianet\Vianet.csproj", "{CE126AF9-4A36-4FD5-B6CB-39F53B6DB62F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "broadband", "broadband\broadband.csproj", "{5EADAF0C-5453-47C1-B9D4-F3B8433B1AED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -73,6 +75,24 @@ Global
 		{CE126AF9-4A36-4FD5-B6CB-39F53B6DB62F}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{CE126AF9-4A36-4FD5-B6CB-39F53B6DB62F}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{CE126AF9-4A36-4FD5-B6CB-39F53B6DB62F}.Release|iPhoneSimulator.Deploy.0 = Release|Any CPU
+		{5EADAF0C-5453-47C1-B9D4-F3B8433B1AED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EADAF0C-5453-47C1-B9D4-F3B8433B1AED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EADAF0C-5453-47C1-B9D4-F3B8433B1AED}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{5EADAF0C-5453-47C1-B9D4-F3B8433B1AED}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{5EADAF0C-5453-47C1-B9D4-F3B8433B1AED}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{5EADAF0C-5453-47C1-B9D4-F3B8433B1AED}.Debug|iPhone.Deploy.0 = Debug|Any CPU
+		{5EADAF0C-5453-47C1-B9D4-F3B8433B1AED}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{5EADAF0C-5453-47C1-B9D4-F3B8433B1AED}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{5EADAF0C-5453-47C1-B9D4-F3B8433B1AED}.Debug|iPhoneSimulator.Deploy.0 = Debug|Any CPU
+		{5EADAF0C-5453-47C1-B9D4-F3B8433B1AED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EADAF0C-5453-47C1-B9D4-F3B8433B1AED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EADAF0C-5453-47C1-B9D4-F3B8433B1AED}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{5EADAF0C-5453-47C1-B9D4-F3B8433B1AED}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{5EADAF0C-5453-47C1-B9D4-F3B8433B1AED}.Release|iPhone.Build.0 = Release|Any CPU
+		{5EADAF0C-5453-47C1-B9D4-F3B8433B1AED}.Release|iPhone.Deploy.0 = Release|Any CPU
+		{5EADAF0C-5453-47C1-B9D4-F3B8433B1AED}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{5EADAF0C-5453-47C1-B9D4-F3B8433B1AED}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{5EADAF0C-5453-47C1-B9D4-F3B8433B1AED}.Release|iPhoneSimulator.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
